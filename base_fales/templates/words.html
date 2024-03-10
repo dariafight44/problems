@@ -1,7 +1,7 @@
 <p>Топ-20 сленговых фраз чтобы элементарно понимать что к чему</p>
 <ul>
-    <li><i>Ава</i></li>
-    <li><i>Вайб</i></li>
+    <a href="{{ url_for('display_ava') }}"><li><i>Ава</i></li></a>
+    <a href="{{ url_for('display_vibe') }}"><li><i>Вайб</i></li></a>
     <li><i>Донатить</i></li>
     <li><i>Жиза</i></li>
     <li><i>Краш</i></li>
@@ -21,3 +21,7 @@
     <li><i>Дефолт</i></li>
     <li><i>НПС</i></li>
 </ul>
+
+<nav>
+    <a href="{{ url_for('display_main_page')}}">Назад</a>
+</nav>
