@@ -1,27 +1,14 @@
 <p>И на чем общались наши родители</p>
 <ul>
-    <li><i>Ребзя</i></li>
-    <a href="{{ url_for('display_shnurky') }}"><li><i>Шнурки</i></li></a>
-    <li><i>Загодя</i></li>
-    <li><i>Покумекать</i></li>
-    <li><i>Егоза</i></li>
-    <li><i>Тырчик</i></li>
-    <li><i>Бадья</i></li>
-    <li><i>Кукситься</i></li>
-    <li><i>Шкет</i></li>
-    <li><i>Шибздик</i></li>
-    <li><i>Клюка</i></li>
-    <li><i>Простокваша</i></li>
-    <li><i>Верхонки</i></li>
-    <li><i>Сничка</i></li>
-    <li><i>Салазки</i></li>
-    <li><i>Вехотка</i></li>
-    <li><i>Корчажка</i></li>
-    <li><i>Палисадник</i></li>
-    <a href="{{ url_for('display_sovparshiv') }}"><li><i>Совпаршив</i></li></a>
-    <li><i>Фaкмен</i></li>
-    
+    {% for u in slangDREsult %}
+    <li>
+        <a href="{{ url_for('display_shnurky') }}"><i>{{ u['name'] }}</i></a>
+    </li>
+   {% endfor %}
 </ul>
 <nav>
     <a href="{{ url_for('display_main_page')}}">Назад</a>
 </nav>
+
+
+
