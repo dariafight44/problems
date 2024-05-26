@@ -3,7 +3,7 @@
 <ul>
     {% for o in slangTResult %}
     <li>
-    <a href="{{ url_for('display_ava') }}"><i>{{ o['name'] }}</i></a>
+    <a href="{{ url_for('display_current_phrase', name=o['name'])}}"><i>{{ o['name'] }}</i></a>
     </li>
     {% endfor %}
 </ul>

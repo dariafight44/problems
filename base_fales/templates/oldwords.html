@@ -2,7 +2,7 @@
 <ul>
     {% for u in slangDREsult %}
     <li>
-        <a href="{{ url_for('display_shnurky') }}"><i>{{ u['name'] }}</i></a>
+        <a href="{{ url_for('display_shnurky'), name=u['name']}}"><i>{{ u['name'] }}</i></a>
     </li>
    {% endfor %}
 </ul>

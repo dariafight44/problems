@@ -1,0 +1,14 @@
+{% extends 'base_template.html' %}
+{% block title %}{{name}}{% endblock %}
+
+        {% block word_description %}
+        <p>
+            {{description}}
+        </p>
+        <nav>
+            <a href="{{ url_for('display_words1')}}">Назад</a>
+        </nav>
+        {% endblock %}
+            
+        
+   

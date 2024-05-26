@@ -48,11 +48,13 @@ def create_app():
     def display_shnurky():
         return render_template("shnurky.html")
     
-
+    @app.route("/display_current_phrase/<string:name>")
+    def display_current_phrase(name):
+        result = json.loads(requests.get("http://127.0.0.1:8080/slang/today/" + name).text)
+        return render_template(
+        "phrase_page.html",
+        name=result["name"],
+        description=result["desccrption"])
     
-
-
-
-
 
     return app
